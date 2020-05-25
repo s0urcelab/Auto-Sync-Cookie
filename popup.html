@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Setting</title>
+  <style>
+    body {
+      margin: 12px;
+      overflow: hidden;
+      background: white;
+      font-size: 14px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    }
+
+    Label {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    input {
+      margin-top: 4px;
+      -webkit-appearance: none;
+      box-sizing: border-box;
+      padding: 4px 11px;
+      font-variant: tabular-nums;
+      list-style: none;
+      font-feature-settings: 'tnum';
+      position: relative;
+      display: inline-block;
+      width: 200px;
+      height: 32px;
+      color: rgba(0, 0, 0, 0.65);
+      font-size: 14px;
+      line-height: 1.5;
+      background-color: #fff;
+      background-image: none;
+      border: 1px solid #d9d9d9;
+      border-radius: 4px;
+      transition: all 0.3s;
+    }
+
+    input::-webkit-input-placeholder {
+      color: #bfbfbf;
+    }
+
+    textarea#listen-domain {
+      color: rgba(0, 0, 0, 0.65);
+      margin-top: 4px;
+      padding: 4px 8px;
+      min-width: 180px;
+      min-height: 50px;
+      border: 1px solid #d9d9d9;
+      border-radius: 4px;
+    }
+
+    .btn {
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      color: #fff;
+      -webkit-appearance: button;
+      background-color: #1890ff;
+      text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.12);
+      box-shadow: 0 2px 0 rgba(0, 0, 0, 0.045);
+      outline: 0;
+      line-height: 1.499;
+      display: inline-block;
+      font-weight: 400;
+      white-space: nowrap;
+      text-align: center;
+      background-image: none;
+      border: 1px solid #1890ff;
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+      user-select: none;
+      height: 32px;
+      padding: 0 15px;
+      font-size: 14px;
+      border-radius: 4px;
+    }
+
+    .btn:hover, .btn:focus {
+      background-color: #40a9ff;
+      border-color: #40a9ff;
+    }
+
+    .btn:active {
+      border-color: #096dd9;
+      background-color: #096dd9;
+    }
+
+
+  </style>
+</head>
+<body>
+<div class="setting-box">
+  <label>
+    Listen Domains
+    <textarea id="listen-domain" placeholder="domain.com (support multi-line)"></textarea>
+  </label>
+  <label>
+    Sync URL
+    <input type="text" id="sync-url" placeholder="http://localhost">
+  </label>
+  <button class="btn" type="button" id="save-btn">Sync</button>
+</div>
+<script src="popup.js"></script>
+</body>
+</html>
