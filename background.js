@@ -32,11 +32,9 @@ chrome.storage.onChanged.addListener(function({ listenDomain, syncURL }) {
     })
 })
 
-console.log("listen")
 // register cookies listener
 chrome.cookies.onChanged.addListener(function(info) {
     const {cause, cookie: {domain, name, path, value}, removed} = info
-    console.log(domain, config.listenDomain, "config.listenDomain")
     if(config.listenDomain.includes(domain) && removed === false && cause === 'explicit') {
         chrome.cookies.set({
             url: config.syncURL,
