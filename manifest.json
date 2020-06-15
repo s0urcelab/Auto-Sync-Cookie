@@ -1,8 +1,8 @@
 {
   "name": "Auto Sync Cookie",
   "description": "listen and sync Cookie to target domain.",
-  "version": "0.1",
-  "permissions": ["tabs", "http://*/*", "https://*/*", "storage", "cookies", "notifications"],
+  "version": "0.2",
+  "permissions": ["storage", "cookies", "<all_urls>", "notifications"],
   "icons": { "16": "icon.png", "48": "icon.png", "128": "icon.png" },
   "browser_action": {
       "default_title": "Listen & Sync Cookie to target domain.",
